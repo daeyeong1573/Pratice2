@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.widget.Toast
 import com.example.pratice2.R
+import kotlinx.android.synthetic.main.activity_life_cycle.*
 
 class LifeCycleActivity : AppCompatActivity() {
     val TAG: String = "로그"
@@ -14,6 +16,9 @@ class LifeCycleActivity : AppCompatActivity() {
         //레이아웃 설정
         setContentView(R.layout.activity_life_cycle)
         Log.d(TAG,"LifeCycleActivity - onCreate() called")
+        button.setOnClickListener {
+            Toast.makeText(this,"버튼을 클릭하였습니다.",Toast.LENGTH_LONG).show()
+        }
 
 
     }

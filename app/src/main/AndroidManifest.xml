@@ -9,18 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pratice2">
+        <activity android:name=".DataWithLiveActivity">
+
+        </activity>
         <activity android:name=".dataBindg.DataBindingActivity">
+
+        </activity>
+        <activity android:name=".liveData.LiveData"></activity>
+        <activity android:name=".lifecycle.LifeCycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".liveData.LiveData">
-
-        </activity>
-        <activity android:name=".lifecycle.LifeCycleActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
