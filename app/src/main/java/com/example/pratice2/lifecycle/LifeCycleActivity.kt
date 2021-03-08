@@ -1,4 +1,4 @@
-package com.example.pratice2.view
+package com.example.pratice2.lifecycle
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +14,8 @@ class LifeCycleActivity : AppCompatActivity() {
         //레이아웃 설정
         setContentView(R.layout.activity_life_cycle)
         Log.d(TAG,"LifeCycleActivity - onCreate() called")
+
+
     }
 
     override fun onStart() {
