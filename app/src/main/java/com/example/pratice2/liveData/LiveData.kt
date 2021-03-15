@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.example.pratice2.R
-import kotlinx.android.synthetic.main.activity_live_data.*
+import com.example.pratice2.databinding.ActivityLiveDataBinding
 
 class LiveData : AppCompatActivity() {
-
+    val LiveBinding by lazy { ActivityLiveDataBinding.inflate(layoutInflater) }
     private var ctn = 0
 
     // value값 초기화
@@ -17,16 +17,16 @@ class LiveData : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_live_data)
+        setContentView(LiveBinding.root)
 
         //live data의 value의 변경을 감지하고 호출
         livetext.observe(this, Observer {
 
             //it으로 넘어오는 param은 LiveData의 value
-                text_test.text = it
+               LiveBinding.textTest.text = it
         })
 
-        btn_change.setOnClickListener {
+        LiveBinding.btnChange.setOnClickListener {
 
             //livetext의 value를 변경
             //livetext 자체를 변경하면 안됨

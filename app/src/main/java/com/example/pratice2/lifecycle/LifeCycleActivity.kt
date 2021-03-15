@@ -6,17 +6,17 @@ import android.os.PersistableBundle
 import android.util.Log
 import android.widget.Toast
 import com.example.pratice2.R
-import kotlinx.android.synthetic.main.activity_life_cycle.*
+import com.example.pratice2.databinding.ActivityLifeCycleBinding
 
 class LifeCycleActivity : AppCompatActivity() {
     val TAG: String = "로그"
-
+    val lbinding by lazy { ActivityLifeCycleBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //레이아웃 설정
-        setContentView(R.layout.activity_life_cycle)
+        setContentView(lbinding.root)
         Log.d(TAG,"LifeCycleActivity - onCreate() called")
-        button.setOnClickListener {
+        lbinding.button.setOnClickListener {
             Toast.makeText(this,"버튼을 클릭하였습니다.",Toast.LENGTH_LONG).show()
         }
 
